@@ -8,7 +8,7 @@ document.onkeydown = checkKey;
 function checkKey(e) {
 
     //generate a random danger block whenever an arrow key was pressed and it is the 3rd turn
-	if((e.keyCode >= '37' && e.keyCode <= '40') && turnNumber % 3 == 0){
+	if((e.keyCode >= '37' && e.keyCode <= '40') && turnNumber % redBlockFrequency == 0){
 		randomDanger();
 	}
 
