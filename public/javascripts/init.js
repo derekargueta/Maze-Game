@@ -4,6 +4,9 @@ var player = new Player();
 // This array holds the IDs of all the red blocks that kill you
 var dangerous = new Array();
 
+var animationTime = 100;
+
+
 // This array holds the IDs of all the portals
 var portals = new Array();
 
