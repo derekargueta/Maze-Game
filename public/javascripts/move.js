@@ -7,14 +7,18 @@ document.onkeydown = checkKey;
 
 function checkKey(e) {
 
-    //generate a random danger block whenever an arrow key was pressed and it is the 3rd turn
-	if((e.keyCode >= '37' && e.keyCode <= '40') && turnNumber % redBlockFrequency == 0){
+    //generate a random danger block whenever an arrow key was pressed and it is
+    // the 3rd turn
+
+    keyCodeIsInRange = e.keyCode >= '37' && e.keyCode <= '40';
+	if(keyCodeIsInRange && turnNumber % redBlockFrequency == 0) {
+
 		randomDanger();
 	}
 
     e = e || window.event;
 
-    var objStyle = document.getElementById("block").style;
+    var objStyle = $("#block").position();
     var left = objStyle.left;
     var top = objStyle.top;
 
@@ -28,16 +32,18 @@ function checkKey(e) {
         case 37:
             e.preventDefault();
             player.moveLeft(left, top);
-            
             break;
+
         case 38:
             e.preventDefault();
             player.moveUp(left, top);
             break;
+
         case 39:
             e.preventDefault();
             player.moveRight(left, top);
             break;
+
         case 40:
             e.preventDefault();
             player.moveDown(left, top);
@@ -45,7 +51,5 @@ function checkKey(e) {
     }
 
     //status checks
-    checkWin();
-    checkLoss();
-    checkPortal();
+    
 }

@@ -53,7 +53,7 @@ function createBack(){
 		div.style.top = t + 'px';
 		div.style.left = left + 'px';
 		div.type = "Nothing";
-		document.getElementById("cage").appendChild(div);
+		$("#cage").append(div);
 
 		if(x % 18 == 0){
 
@@ -71,7 +71,7 @@ function createBack(){
 
 function Wall(id){
 	//creating the HTML entity
-	obj = document.getElementById(id)
+	obj = document.getElementById(id);
 	obj.className = "wall square";
 
 	//creating the Wall object

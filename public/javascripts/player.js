@@ -2,8 +2,6 @@
 
 function Player(){
 
-    obj = $("#block");
-
     animating = false;
 
     //function to move the player's block one space to the left
@@ -25,17 +23,15 @@ function Player(){
         
         if(parseInt(left, 10) > parseInt("0px", 10) && !wallPresent){
 
-            /*
-            newLeftPosition = (parseInt(left,10) - parseInt("50px", 10)+"px");
-			document.getElementById("block").style.left = newLeftPosition;
-	        */
-
             if(!animating){
                 animating = true;
                 $("#block").animate({
                     left: "-=50"
                 }, animationTime, function(){
                     animating = false;
+                    checkWin();
+                    checkLoss();
+                    checkPortal();
                 });
             }
         }
@@ -60,17 +56,15 @@ function Player(){
 
         if(parseInt(left, 10) < parseInt("850px", 10) && !wallPresent){
 
-            /*
-            newLeftPosition = (parseInt(left,10)+parseInt("50px", 10)+"px");
-			document.getElementById("block").style.left = newLeftPosition;
-		    */
-
             if(!animating){
                 animating = true;
                 $("#block").animate({
                     left: "+=50"
                 }, animationTime, function(){
                     animating = false;
+                    checkWin();
+                    checkLoss();
+                    checkPortal();
                 });
             }
         }
@@ -95,17 +89,15 @@ function Player(){
 
         if(parseInt(top, 10) > parseInt("0px", 10) && !wallPresent){
 
-            /*
-            newTopPosition = (parseInt(top, 10) - parseInt("50px", 10)+"px");
-			document.getElementById("block").style.top = newTopPosition;
-            */
-
             if(!animating){
                 animating = true;
                 $("#block").animate({
                     top: "-=50"
                 }, animationTime, function(){
                     animating = false;
+                    checkWin();
+                    checkLoss();
+                    checkPortal();
                 });
             }
 		}
@@ -129,16 +121,15 @@ function Player(){
 
         if(parseInt(top, 10) < parseInt("450px", 10) && !wallPresent){
 
-            /*
-            newTopPosition = parseInt(top, 10) + parseInt("50px", 10) + "px";
-			document.getElementById("block").style.top = newTopPosition;
-		  */
             if(!animating){
                 animating = true;
                 $("#block").animate({
                     top: "+=50"
                 }, animationTime, function(){
                     animating = false;
+                    checkWin();
+                    checkLoss();
+                    checkPortal();
                 });
             }
         }
