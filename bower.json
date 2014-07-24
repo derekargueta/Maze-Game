@@ -1,0 +1,19 @@
+{
+  "name": "Maze-Game",
+  "version": "0.2.0",
+  "homepage": "https://github.com/derekargueta/Maze-Game",
+  "authors": [
+    "derekargueta <darguetap@gmail.com>"
+  ],
+  "description": "Simple Maze-Framework for first-person web games in JavaScript.",
+  "ignore": [
+    "**/*.*",
+    "node_modules",
+    "bower_components",
+    "Maze-Game"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}
