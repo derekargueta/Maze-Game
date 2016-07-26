@@ -31,7 +31,7 @@ one();
 function one(){
 
 	createBack();
-	var p = levelOne[1].split(";");
+	const p = levelOne[1].split(";");
 	createPortal(p[0], p[1]);
 	createWalls();
 }

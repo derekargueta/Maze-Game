@@ -49,7 +49,5 @@ function checkKey(e) {
             player.moveDown(left, top);
             break;
     }
-
-    //status checks
-    
 }
+
