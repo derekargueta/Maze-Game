@@ -1,7 +1,6 @@
 const express = require('express');
 const path = require('path');
 const favicon = require('static-favicon');
-const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
@@ -21,7 +20,6 @@ app.engine('html', require('ejs').renderFile)
 app.set('view engine', 'html');
 
 app.use(favicon());
-app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
